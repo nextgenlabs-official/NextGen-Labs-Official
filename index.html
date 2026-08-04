@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e12">
+    <title>NextGen Labs | Founded by Madhankumar Onteddubandi (MadhanBlastz)</title>
+    <meta name="description"
+        content="Welcome to NextGen Labs, founded by Madhankumar Onteddubandi (MadhanBlastz). Explore our premier apps including OneFiles and advanced mobile utility suites.">
+    <meta name="keywords"
+        content="NextGen Labs, Madhankumar Onteddubandi, MadhanBlastz, Madhanblast, OneFiles, One Files, all in one app, mobile utility apps">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NextGen Labs | Official Software Portal & Apps">
+    <meta property="og:description"
+        content="Discover high-performance mobile applications and games built by Madhankumar Onteddubandi under NextGen Labs.">
+    <meta property="og:image" content="feature_graphic_bg_1780857096668.png">
+
+    <link rel="icon" type="image/png" href="NextGen Labs icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NextGen Labs",
+        "founder": {
+          "@type": "Person",
+          "name": "Madhankumar Onteddubandi",
+          "alternateName": ["MadhanBlastz", "madhanblast", "Madhan Blast", "Madhan Blastz"]
+        },
+        "description": "NextGen Labs is a premier software ecosystem founded by Madhankumar Onteddubandi (MadhanBlastz), pioneering highly consolidated mobile applications, mobile utilities, custom frameworks, and interactive games.",
+        "url": "https://nextgenlabs-official.github.io/NextGen-Labs-Official/"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Madhankumar Onteddubandi",
+        "alternateName": ["MadhanBlastz", "madhanblast", "Madhan Blast", "Madhan Blastz"],
+        "jobTitle": "Founder & Lead Architect",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "NextGen Labs"
+        },
+        "knowsAbout": ["Android Development", "Software Architecture", "Mobile Utilities", "P2P Protocols"],
+        "sameAs": [
+          "https://nextgenlabs-official.github.io/Developer/"
+        ]
+      }
+    ]
+    </script>
+
+    <style>
+        :root {
+            --bg: #0a0e12;
+            --surface: #10151b;
+            --surface-2: #151b23;
+            --ink: #eceff3;
+            --ink-dim: #8993a3;
+            --ink-faint: #566072;
+            --amber: #f2a93b;
+            --amber-dim: #b98130;
+            --teal: #5eead4;
+            --border: rgba(94, 234, 212, 0.15);
+            --border-soft: rgba(255, 255, 255, 0.07);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-image:
+                radial-gradient(ellipse 800px 600px at 15% 15%, rgba(94, 234, 212, 0.08), transparent 60%),
+                radial-gradient(ellipse 900px 700px at 85% 85%, rgba(242, 169, 59, 0.06), transparent 60%);
+            background-attachment: fixed;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.01em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ---------- Top Navigation ---------- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: rgba(10, 14, 18, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .nav-logo img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--ink-dim);
+        }
+
+        .nav-link:hover {
+            color: var(--teal);
+        }
+
+        /* ---------- Hero Area ---------- */
+        header {
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            padding: 4.5rem 1.5rem 3rem;
+        }
+
+        .hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .hero-inner {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 4rem;
+            }
+
+            .hero-text-block {
+                flex: 1.2;
+                max-width: 650px;
+                text-align: left;
+            }
+
+            .hero-stats {
+                flex: 0.8;
+                margin-top: 0;
+                justify-content: center;
+            }
+        }
+
+        .eyebrow-path {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--teal);
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            margin-bottom: 1.4rem;
+            opacity: 0;
+            animation: fadeUp 0.7s ease 0.1s forwards;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 7px;
+            height: 1em;
+            background: var(--teal);
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+            transform: translateY(2px);
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        h1.name {
+            font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.08;
+            color: var(--ink);
+            opacity: 0;
+            animation: fadeUp 0.7s ease 0.22s forwards;
+        }
+
+        .role-line {
+            margin-top: 1.1rem;
+            font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+            color: var(--ink-dim);
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeUp 0.7s ease 0.34s forwards;
+            line-height: 1.5;
+        }
+
+        .role-line strong {
+            color: var(--amber);
+            font-weight: 600;
+        }
+
+        .hero-desc {
+            margin-top: 1.4rem;
+            font-size: 0.98rem;
+            color: var(--ink-faint);
+            max-width: 540px;
+            opacity: 0;
+            animation: fadeUp 0.7s ease 0.46s forwards;
+            line-height: 1.6;
+        }
+
+        /* Download Badge styling */
+        .hero-actions {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeUp 0.7s ease 0.54s forwards;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #10151b 0%, #151b23 100%);
+            border: 1px solid var(--border-soft);
+            padding: 0.6rem 1.2rem;
+            border-radius: 12px;
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            text-align: left;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #151b23 0%, #1c2430 100%);
+            border-color: var(--amber);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(242, 169, 59, 0.15);
+        }
+
+        .download-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .download-btn:hover svg {
+            transform: scale(1.1);
+        }
+
+        .privacy-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.6rem 1.2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-soft);
+            background: transparent;
+            color: var(--ink-dim);
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .privacy-btn:hover {
+            border-color: var(--teal);
+            color: var(--ink);
+            background: rgba(94, 234, 212, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(94, 234, 212, 0.15);
+        }
+
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.25;
+        }
+
+        .btn-sub {
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--ink-faint);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-main {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-stats {
+            margin-top: 2.2rem;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 2.5rem 3rem;
+            opacity: 0;
+            animation: fadeUp 0.7s ease 0.62s forwards;
+        }
+
+        .stat .num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.1;
+        }
+
+        .stat .num span {
+            color: var(--amber);
+        }
+
+        .stat .label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--ink-faint);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 0.2rem;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ---------- Apps Section ---------- */
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .section-sub {
+            color: var(--ink-dim);
+            font-size: 0.95rem;
+            margin-top: 0.4rem;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+
+        /* Card styles */
+        .app-card {
+            background: rgba(16, 21, 27, 0.65);
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--teal), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--teal);
+            box-shadow: 0 20px 40px rgba(94, 234, 212, 0.08);
+        }
+
+        .app-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-top {
+            margin-bottom: 1.2rem;
+        }
+
+        .app-icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .app-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--surface-2);
+            border: 1px solid var(--border-soft);
+            padding: 6px;
+            object-fit: contain;
+        }
+
+        .app-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--teal);
+            background: rgba(94, 234, 212, 0.08);
+            border: 1px solid rgba(94, 234, 212, 0.2);
+            padding: 0.2rem 0.55rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .app-badge.soon {
+            color: var(--amber);
+            background: rgba(242, 169, 59, 0.08);
+            border-color: rgba(242, 169, 59, 0.2);
+        }
+
+        .app-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.4rem;
+        }
+
+        .app-desc {
+            font-size: 0.86rem;
+            color: var(--ink-dim);
+            line-height: 1.45;
+            min-height: 3.8rem;
+        }
+
+        /* Action Buttons */
+        .card-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--teal) 0%, #3cd6c1 100%);
+            color: #050a0e;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(94, 234, 212, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--surface-2);
+            border: 1px solid var(--border-soft);
+            color: var(--ink);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--ink-dim);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .btn-outline {
+            border: 1px dashed var(--border-soft);
+            color: var(--ink-dim);
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+            background: rgba(94, 234, 212, 0.02);
+        }
+
+        /* ---------- Developer / Team Section ---------- */
+        .dev-container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .dev-card {
+            background: rgba(16, 21, 27, 0.65);
+            border: 1px solid var(--border-soft);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media (min-width: 700px) {
+            .dev-card {
+                flex-direction: row;
+                align-items: center;
+                gap: 3rem;
+            }
+        }
+
+        .dev-avatar-box {
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .dev-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 2px solid var(--teal);
+            padding: 4px;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(94, 234, 212, 0.2);
+        }
+
+        .dev-alias {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--amber);
+            margin-top: 0.6rem;
+            display: block;
+        }
+
+        .dev-info h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .dev-role {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .dev-bio {
+            color: var(--ink-dim);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .dev-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .dev-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            background: var(--surface-2);
+            color: var(--ink-dim);
+            border: 1px solid var(--border-soft);
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            border-top: 1px solid var(--border-soft);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--ink-faint);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+        }
+
+        footer p {
+            margin-bottom: 0.6rem;
+        }
+
+        footer a {
+            color: var(--ink-dim);
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: var(--teal);
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--ink);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .footer-logo img {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navbar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="NextGen Labs icon.png" alt="NextGen Labs Logo">
+            NextGen Labs
+        </div>
+        <div class="nav-links">
+            <a href="#apps" class="nav-link">/apps</a>
+            <a href="#" class="nav-link">/legal</a>
+        </div>
+    </nav>
+
+    <!-- Hero Area -->
+    <header>
+        <div class="hero-inner">
+            <div class="hero-text-block">
+                <div class="eyebrow-path">
+                    ~/nextgen-labs/<span class="cursor"></span>
+                </div>
+                <h1 class="name">NextGen Labs</h1>
+                <p class="role-line">
+                    Pioneering lightweight, highly consolidated utilities & interactive puzzle games.
+                    Designed & founded by <strong style="color: var(--amber);">Madhankumar Onteddubandi ( MadhanBlastz
+                        )</strong> under NextGen Labs.
+                </p>
+                <p class="dev-bio hero-desc">Specializing in Android systems architecture, custom mobile compilation
+                    IDEs, direct P2P communication systems, and modular application consolidation frameworks. Under the
+                    <strong>NextGen Labs</strong> brand, he engineers consolidated tools that pack maximum performance
+                    into minimal storage footprints.
+                </p>
+                <div class="hero-actions">
+                    <!-- Developer Console Profile button -->
+                    <a href="https://nextgenlabs-official.github.io/Developer/" target="_blank" rel="noopener"
+                        class="download-btn">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="flex-shrink: 0; transform: translateY(1px);">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                            <polyline points="2 17 12 22 22 17" />
+                            <polyline points="2 12 12 17 22 12" />
+                        </svg>
+                        <div class="btn-text">
+                            <span class="btn-sub">EXPLORE</span>
+                            <span class="btn-main">Developer Profile</span>
+                        </div>
+                    </a>
+                    <!-- Review Legal / Privacy Policies -->
+                    <a href="https://nextgenlabs-official.github.io/Privacy-policy/" target="_blank" rel="noopener"
+                        class="privacy-btn">
+                        <div class="btn-text">
+                            <span class="btn-sub">REVIEW LEGAL</span>
+                            <span class="btn-main">Privacy Policy</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Block -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="num">2</div>
+                    <div class="label">Active Apps</div>
+                </div>
+                <div class="stat">
+                    <div class="num">50<span>+</span></div>
+                    <div class="label">Built-in Tools</div>
+                </div>
+                <div class="stat">
+                    <div class="num">1</div>
+                    <div class="label">Founder Profile</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Flagship Apps Section -->
+    <section id="apps" class="section-container">
+        <div class="section-header">
+            <h2 class="section-title">Flagship Applications</h2>
+            <p class="section-sub">Consolidated, lightweight systems replacement solutions.</p>
+        </div>
+
+        <div class="apps-grid">
+            <!-- App Card 1: OneFiles -->
+            <div class="app-card">
+                <div class="card-top">
+                    <div class="app-icon-wrapper">
+                        <img src="NextGen Labs icon.png" alt="OneFiles Logo" class="app-logo">
+                        <span class="app-badge">Flagship App</span>
+                    </div>
+                    <h3 class="app-name">OneFiles</h3>
+                    <p class="app-desc">The ultimate mobile super app. Replaces dozens of standard downloads with a
+                        files manager, browser, media, games, and 50+ utilities.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.onefiles.app" class="btn btn-primary"
+                        target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                            style="width: 14px; height: 14px; fill: currentColor;">
+                            <path
+                                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58 33.1-60.1-60.1 60.1-60.1 58 33.1c24.3 13.9 24.3 36.6 0 54zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
+                        </svg>
+                        Get it on Play Store
+                    </a>
+                    <div class="btn-group">
+                        <a href="index.html" class="btn btn-secondary">Explore</a>
+                        <a href="https://nextgenlabs-official.github.io/Privacy-policy/onefiles.html"
+                            class="btn btn-outline" target="_blank" rel="noopener">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Card 2: 2048 Tile Fusion -->
+            <div class="app-card">
+                <div class="card-top">
+                    <div class="app-icon-wrapper">
+                        <!-- Custom styled gold logo representation for 2048 game -->
+                        <div class="app-logo"
+                            style="display: flex; align-items: center; justify-content: center; background: rgba(242, 169, 59, 0.1); border-color: rgba(242, 169, 59, 0.3); font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--amber); font-size: 0.95rem; border-radius: 10px;">
+                            2048
+                        </div>
+                        <span class="app-badge">Classic Game</span>
+                    </div>
+                    <h3 class="app-name">2048 Tile Fusion</h3>
+                    <p class="app-desc">A highly polished take on the classic 2048 puzzle. Features buttery-smooth tile
+                        movements, customizable grids, high scores, and modern dark themes.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.g2048.app" class="btn btn-primary"
+                        target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                            style="width: 14px; height: 14px; fill: currentColor;">
+                            <path
+                                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58 33.1-60.1-60.1 60.1-60.1 58 33.1c24.3 13.9 24.3 36.6 0 54zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z" />
+                        </svg>
+                        Get it on Play Store
+                    </a>
+                    <a href="https://nextgenlabs-official.github.io/Privacy-policy/2048.html" class="btn btn-outline"
+                        target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Legal Section / Footer -->
+    <footer id="legal">
+        <div class="footer-logo">
+            <img src="NextGen Labs icon.png" alt="NextGen Labs Logo">
+            NextGen Labs
+        </div>
+        <p>&copy; <span id="year"></span> Madhankumar Onteddubandi ( MadhanBlastz ) · NextGen Labs. All rights reserved.
+        </p>
+
+    </footer>
+
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
