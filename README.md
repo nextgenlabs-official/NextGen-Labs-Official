@@ -20,7 +20,6 @@ NextGen Labs focuses on software consolidation: packing peak functionality into 
 NextGen Labs was designed and founded by **Madhankumar Onteddubandi (@MadhanBlastz)**.
 
 * **Developer Portal**: [Madhankumar Onteddubandi Profile](https://nextgenlabs-official.github.io/Developer/)
-* **Contact & Code Repos**: [GitHub Profile](https://github.com/madhankumar-onteddubandi)
 
 ---
 
