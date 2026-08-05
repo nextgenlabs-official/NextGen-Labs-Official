@@ -1,6 +1,6 @@
 # NextGen Labs
 
-Official portal for **NextGen Labs**, a software ecosystem pioneering high-performance mobile utilities, custom frameworks, and interactive puzzle games.
+Official portal for **NextGen Labs**, a software ecosystem pioneering high-performance mobile applications and interactive mobile games.
 
 🔗 **Ecosystem Hub**: [Official NextGen Labs Website](https://nextgenlabs-official.github.io/NextGen-Labs-Official/)  
 
@@ -8,7 +8,7 @@ Official portal for **NextGen Labs**, a software ecosystem pioneering high-perfo
 
 ## 🔬 Core Mission
 
-NextGen Labs focuses on software consolidation: packing peak functionality into lightweight footprints. By building modular utility layouts and custom scripting compilers, we eliminate storage clutter and replace bloated app bundles with unified packages.
+NextGen Labs focuses on software consolidation: packing peak functionality into lightweight footprints. By building modular utility layouts and we eliminate storage clutter and replace bloated app bundles with unified packages.
 
 ## 📦 Active Products
 
